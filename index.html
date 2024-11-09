@@ -287,13 +287,13 @@ img#impresoraButton {
     <!-- Contenedor de botones -->
          <div class="button-box">
   <!-- Botón de WhatsApp con ícono -->
-  <a href="#" id="impresoraButton">
+  <a href="#" id="impresoraButton" onclick="printTicket()">
     <img class="boton" src="Print.png" class="ImganelLogo" width= "60%" id "foto">
   </a>
   
   <!-- Botón existente de WhatsApp -->
   
-  <a href="#" id="whatsappButton">
+  <a href="#" id="whatsappButton" onclick="sendWhatsAppMessage()">
     <img class="boton" src="wsp.png" class="ImganelLogo" width= "60%" id "foto">
   </a>
     </div>
@@ -438,7 +438,8 @@ img#impresoraButton {
     
     // Función para imprimir el ticket
 function printTicket() {
-  window.print();
+    window.print();
+    window.location.reload(); // Refresca la página para mejorar la compatibilidad
 }
 
 // Asignar la función al evento click del botón de impresión
